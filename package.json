@@ -129,9 +129,7 @@
         "path": "@semantic-release/git",
         "assets": [
           "package.json",
-          "docs/CHANGELOG.md",
-          "./README.md",
-          "scripts/stats.json"
+          "docs/CHANGELOG.md"
         ],
         "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
       }
