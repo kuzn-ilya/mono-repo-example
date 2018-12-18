@@ -74,7 +74,7 @@
       "build"
     ],
     "testMatch": [
-      "**/__tests__/**/*.test.js?(x)"
+      "**/packages/**/__tests__/**/*.test.js?(x)"
     ],
     "transform": {
       "^.+\\.jsx?$": "./scripts/jest-transform.js"
