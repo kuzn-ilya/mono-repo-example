@@ -1,0 +1,62 @@
+{
+  "name": "kuzn-ilya-foobar",
+  "version": "0.3.1",
+  "description": "Mono repo example - foobar",
+  "main": "index.js",
+  "module": "esm/foobar.js",
+  "unpkg": "umd/foobar.production.min.js",
+  "author": "Ilya Kuznetsov <kuzn.ilya@gmail.com>",
+  "license": "MIT",
+  "typings": "index.d.ts",
+  "files": [
+    "index.js",
+    "index.d.ts",
+    "cjs/",
+    "umd/",
+    "esm/"
+  ],
+  "release": {
+    "verifyConditions": [
+      {
+        "path": "@semantic-release/npm",
+        "pkgRoot": "./build"
+      },
+      "@semantic-release/github",
+      "@semantic-release/git"
+    ],
+    "generateNotes": [
+      "@semantic-release/release-notes-generator"
+    ],
+    "prepare": [
+      {
+        "path": "@semantic-release/changelog",
+        "changelogFile": "docs/CHANGELOG.md",
+        "changelogTitle": "# Change Log"
+      },
+      {
+        "path": "@semantic-release/npm",
+        "pkgRoot": "./build"
+      },
+      {
+        "path": "@semantic-release/git",
+        "assets": [
+          "package.json",
+          "docs/CHANGELOG.md",
+          "./README.md",
+          "scripts/stats.json"
+        ],
+        "message": "chore(release): ${nextRelease.version} [skip ci]\n\n${nextRelease.notes}"
+      }
+    ],
+    "publish": [
+      {
+        "path": "@semantic-release/npm",
+        "pkgRoot": "./build"
+      },
+      "@semantic-release/github"
+    ]
+  },
+  "peerDependencies": {
+    "kuzn-ilya-foo": "^0.3.1"
+  }
+}
