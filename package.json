@@ -17,7 +17,7 @@
     "test:ts": "lerna exec -- typings-tester --dir src/ts-tests",
     "test": "yarn test:dev && yarn test:prod && node ./scripts/coverage.js && yarn test:ts",
     "format": "prettier --write **/*.{js,jsx,d.ts} !**/build/** !.vscode/**",
-    "rollup": "lerna exec -- \"cross-env-shell node $LERNA_ROOT_PATH/scripts/build.js\""
+    "rollup": "lerna exec -- \"cross-env-shell node ../../scripts/build.js\""
   },
   "pre-commit": [
     "test"
