@@ -6,8 +6,9 @@ describe('foobar', () => {
     const result = foobar('Ilya')
     flushPromises()
 
-    result.then(r => expect(r).toBe('Hello, Ilya, from foo!'))
-
-    done()
+    result.then(r => {
+      expect(r).toBe('Hello, Ilya, from foo!!!')
+      done()
+    })
   })
 })
