@@ -109,7 +109,7 @@ function asyncRimRaf(filepath) {
 function getOutputFileName(packageName, { format, isProduction, uglify }) {
   const env = isProduction === undefined ? '' : isProduction ? '.production' : '.development'
   const min = uglify ? '.min' : ''
-  return `../../build/${packageName}/${format}/${packageName}${env}${min}.js`
+  return `./build/${format}/${packageName}${env}${min}.js`
 }
 
 function capitalize(hyphen) {

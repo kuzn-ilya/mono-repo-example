@@ -136,11 +136,11 @@ async function buildAll() {
   }
 
   await Promise.all([
-    asyncCopyTo(`npm`, `../../build/${pkg.name}`),
-    // asyncCopyTo('README.md', `../../build/${pkg.name}/README.md`),
-    // asyncCopyTo('LICENSE', `../../build/${pkg.name}/LICENSE`),
-    asyncCopyTo(`package.json`, `../../build/${pkg.name}/package.json`),
-    asyncCopyTo(`src/index.d.ts`, `../../build/${pkg.name}/index.d.ts`),
+    asyncCopyTo(`npm`, `./build`),
+    // asyncCopyTo('README.md', `./build/${pkg.name}/README.md`),
+    // asyncCopyTo('LICENSE', `./build/${pkg.name}/LICENSE`),
+    asyncCopyTo(`package.json`, `./build/package.json`),
+    asyncCopyTo(`src/index.d.ts`, `./build/index.d.ts`),
   ])
 }
 

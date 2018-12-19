@@ -72,7 +72,7 @@
       "json"
     ],
     "modulePathIgnorePatterns": [
-      "<rootDir>/build/"
+      "<rootDir>/packages\/.*\/build"
     ],
     "testMatch": [
       "**/__tests__/**/*.test.js?(x)"
