@@ -71,10 +71,10 @@
       "json"
     ],
     "modulePathIgnorePatterns": [
-      "build"
+      "./build"
     ],
     "testMatch": [
-      "**/packages/**/__tests__/**/*.test.js?(x)"
+      "**/__tests__/**/*.test.js?(x)"
     ],
     "transform": {
       "^.+\\.jsx?$": "./scripts/jest-transform.js"
